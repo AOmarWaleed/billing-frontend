@@ -1,0 +1,181 @@
+import {
+  Pagination,
+  TextField,
+  Stack,
+  PaginationItem,
+  Box,
+  Button,
+  IconButton,
+  Typography,
+} from "@mui/material";
+
+import { handlePageChange } from "../../pages/users/components/UserDataGrideHandlers";
+import React, { useEffect, useState } from "react";
+
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+
+import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
+
+import FirstPageIcon from '@mui/icons-material/FirstPage';
+import LastPageIcon from '@mui/icons-material/LastPage';
+
+interface CustomPaginationProps {
+  totalPages: number;
+  currentPage: number;
+  onPageChange: (page: number , params ?: any) => void;
+}
+
+const CustomPagination: React.FC<CustomPaginationProps> = ({
+  totalPages,
+  currentPage,
+  onPageChange,
+}) => {
+  const [inputPage, setInputPage] = useState(currentPage.toString());
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputPage(event.target.value);
+  };
+
+  const handleInputSubmit = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      const pageNumber = Number(inputPage);
+      if (!isNaN(pageNumber) && pageNumber >= 1 && pageNumber <= totalPages) {
+        onPageChange(pageNumber);
+      } else {
+        setInputPage(currentPage.toString());
+      }
+    }
+  };
+
+  const handlePageChange = (page: number) => {
+    if (page >= 1 && page <= totalPages) {
+      onPageChange(page);
+    }
+  };
+
+  useEffect(()=> {
+    setInputPage(currentPage.toString())
+  } , [currentPage])
+
+  return (
+    <Box display="flex" alignItems="center" gap={0.2} paddingY={2}>
+      {/* First Page Button */}
+      <IconButton
+        onClick={() => handlePageChange(1)}
+        disabled={currentPage === 1}
+        size="small"
+        
+      >
+        <FirstPageIcon />
+      </IconButton>
+
+      {/* Previous Page Button */}
+      <IconButton
+        onClick={() => handlePageChange(currentPage - 1)}
+        disabled={currentPage === 1}
+        size="small"
+      >
+        <KeyboardArrowLeftIcon />
+      </IconButton>
+
+      {currentPage != 1 && (
+        '...'
+      )}
+      {currentPage > 1 && (
+        <Button
+         
+          onClick={() => handlePageChange(currentPage  -1)}
+          sx={{
+            borderRadius: "50%",
+            width: "30px",
+            height: "30px",
+            minWidth: "30px",
+            padding: 0,
+          }}
+        >
+          {currentPage - 1}
+        </Button>
+      )}
+
+      {/* Current Page */}
+      <Button
+        variant="contained"
+        sx={{
+          borderRadius: "50%",
+          width: "30px",
+          height: "30px",
+          minWidth: "30px",
+          padding: 0,
+        }}
+      >
+        {currentPage}
+      </Button>
+
+      {/* Next Page (if exists) */}
+      {currentPage < totalPages && (
+        <Button
+         
+          onClick={() => handlePageChange(currentPage + 1)}
+          sx={{
+            borderRadius: "50%",
+            width: "30px",
+            height: "30px",
+            minWidth: "30px",
+            padding: 0,
+          }}
+        >
+          {currentPage + 1}
+        </Button>
+      )}
+ 
+     
+      {currentPage != totalPages && (
+        '...'
+      )}
+
+      {/* Next Page Button */}
+      <IconButton
+        onClick={() => handlePageChange(currentPage + 1)}
+        disabled={currentPage === totalPages}
+        size="small"
+      >
+        <KeyboardArrowRightIcon />
+      </IconButton>
+
+      {/* Last Page Button */}
+      <IconButton
+        onClick={() => handlePageChange(totalPages)}
+        disabled={currentPage === totalPages}
+        size="small"
+      >
+        <LastPageIcon />
+      </IconButton>
+
+      <Typography>
+      Page
+      </Typography>
+
+      {/* Jump to Page Input */}
+      <TextField
+        type="number"
+        variant="outlined"
+      
+        value={inputPage}
+        onChange={handleInputChange}
+        onKeyUp={handleInputSubmit}
+        onKeyDown={handleInputSubmit}
+        inputProps={{ min: 1, max: totalPages }}
+        size="small"
+        sx={{ width: 50 }}
+      />
+
+      <span>
+          of {totalPages === 0 ? 1 : totalPages}
+      </span>
+    </Box>
+  );
+};
+
+export default CustomPagination;

@@ -1,0 +1,225 @@
+
+
+.lowlighted-text {
+  color: rgb(126, 125, 125);
+}
+.lowlighted-text-span {
+  color: rgb(126, 125, 125);
+  white-space: nowrap;
+  margin-right: "10px";
+}
+.title-text {
+  color: #4ea4fb; /* Primary color */
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif; /* Font family used by MUI */
+  font-weight: 500; /* Font weight used by MUI buttons */
+  font-size: 0.75rem; /* Font size used by MUI buttons */
+  text-transform: uppercase; /* Text transformation used by MUI buttons */
+  letter-spacing: 0.02857em; /* Letter spacing used by MUI buttons */
+  line-height: 1.75; /* Line height used by MUI buttons */
+}
+
+
+.customCancelBtnStyles {
+  width: "100px" !important;
+  padding: "6px";
+  font-weight: "normal";
+  margin-top: "5px";
+  gap: "0px";
+  font-size: 12px;
+  background-color: rgb(213, 212, 212) !important;
+  border-color: "lightgray";
+  border-width: "2px";
+  border-radius: "5px";
+}
+
+.customsaveBtnStyles {
+  width: "150px";
+  padding: "6px";
+  margin-left: "5px";
+  font-weight: "normal";
+  margin-top: "5px";
+  gap: "0px";
+  background-color: "#21b6ae";
+  font-size: "12px";
+  border-color: "lightgray";
+  border-width: "2px";
+  border-radius: "5px";
+}
+
+.container-fluid {
+  width: 100%;
+  min-height: 99vh;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 0px !important;
+}
+
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+
+.col {
+  flex: 1;
+}
+
+.flex-grow-2 {
+  flex: 2;
+}
+
+.flex-grow-1 {
+  flex: 1;
+}
+
+/* // style={{ whiteSpace: 'nowrap', marginRight: '10px' }} */
+
+/* !login page */
+.login-img {
+  max-width: 300px;
+}
+
+/* SplashScreen */
+.splash-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.splash-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.splash-buttons {
+  position: absolute;
+  bottom: 50px;
+  right: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.skip-button,
+.disable-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.skip-button {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.skip-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.disable-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.disable-button:hover {
+  background-color: #45a049;
+}
+
+/* .filter-textfield-spacing .MuiInputBase-input {
+  padding: "0px 4px !important" ;
+  height: "20px";
+} */
+
+/* bg-gradient for dialog */
+/* .dialog-gradient {
+}
+
+.dialog-gradient .MuiDialog-paper {
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 400px;
+  max-width: 30vw;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(#2764af, #55c5d6);
+}
+
+@media screen and (max-width: 992px) {
+  .dialog-gradient .MuiDialog-paper {
+    max-width: 70vw;
+  }
+}
+
+.dialog-gradient .MuiDialogTitle-root {
+  padding: 16px 24px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.dialog-gradient .MuiDialogContent-root {
+  padding: 20px 24px;
+}
+
+.dialog-gradient .MuiDialogContent-root:first-of-type {
+  padding-top: 20px;
+}
+
+.dialog-gradient .MuiDialogContent-dividers {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 16px 0;
+}
+
+.dialog-gradient .MuiDialogActions-root {
+  justify-content: flex-start;
+  gap: 8px;
+  border-top: 1px solid #eee;
+}
+
+.dialog-gradient .MuiDialogActions-spacing > :not(:first-of-type) {
+  margin-left: 8px;
+}
+
+.dialog-gradient .MuiDialogContentText-root {
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+} */
+
+/* Width variants */
+/* .dialog-xs .MuiDialog-paper {
+  max-width: 444px;
+}
+
+.dialog-sm .MuiDialog-paper {
+  max-width: 600px;
+}
+
+.dialog-md .MuiDialog-paper {
+  max-width: 960px;
+}
+
+.dialog-lg .MuiDialog-paper {
+  max-width: 1280px;
+}
+
+.dialog-xl .MuiDialog-paper {
+  max-width: 1920px;
+} */
+
+/* Fullscreen variant */
+.dialog-fullscreen .MuiDialog-paper {
+  /* Add your fullscreen styles here */
+}
+

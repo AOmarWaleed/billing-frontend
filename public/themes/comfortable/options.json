@@ -1,0 +1,244 @@
+{
+ "typography": {
+    "fontFamily": "Nunito, Arial, sans-serif, Segoe UI",
+    "fontSize": 14,
+    "body1": {
+      "fontSize": "1rem"
+    }
+  },
+  "components": {
+    "MuiTableContainer": {
+      "styleOverrides": {
+        "root": {
+          "background": "#ffffff"
+        }
+      }
+    },
+
+    "MuiTableCell": {
+      "styleOverrides": {
+        "root": {
+          "color": "#000000"
+        }
+      }
+    },
+
+    "MuiButton": {
+      "defaultProps": {
+        "variant": "text",
+        "color": "primary",
+        "disableElevation": false,
+        "disableRipple": false,
+        "disableFocusRipple": false,
+        "fullWidth": false
+      },
+      "styleOverrides": {
+        "root": {
+          "fontFamily": "Nunito, Arial, sans-serif, Segoe UI",
+          "borderRadius": "8px",
+          "textTransform": "none",
+          "fontWeight": "bold",
+          "&.ex-small": {
+            "padding": "4px 8px",
+            "margin": "1px"
+          }
+        }
+      }
+    },
+
+    "MuiDataGrid": {
+      "styleOverrides": {
+        "fontSize" : "0.8rem",
+        "root": {
+          "& .MuiTablePagination-actions button": {
+            "Padding": "0px"
+          },
+          "& .MuiDataGrid-root": {
+            "overFlow": "hidden"
+          },
+          "& .GlCustomPagination": {
+            "padding": "4px",
+            "& .MuiSelect-select, & input": {
+              "padding": "4px 8px"
+            },
+            "& .GlCustomPagination-button": {
+              "fontWeight": "normal",
+              "width": 35,
+              "height": 35,
+              "fontSize": "0.8rem"
+            }
+          },
+          "& .MuiDataGrid-iconButtonContainer": {
+            "display": "none"
+          },
+          "& .MuiDataGrid-menuIconButton": {
+            "width": "12px"
+          },
+        
+          "& .MuiDataGrid-row:nth-child(odd)": {
+            "backgroundColor": "rgba(202, 215, 231, 0.15)",
+            "transition": ".5s all"
+          },
+          "& .MuiDataGrid-row:nth-child(even)": {
+            "backgroundColor": "rgba(85, 197, 197, .15)",
+            "transition": ".5s all"
+          },
+          "& .MuiDataGrid-row:nth-child(odd):hover": {
+            "backgroundColor": "rgba(202, 215, 231, 0.44)"
+          },
+          "& .MuiDataGrid-row:nth-child(even):hover": {
+            "backgroundColor": "rgba(85, 197, 197, .44)"
+          },
+           "& .MuiDataGrid-row": { "display": "flex", "alignItems": "center",
+            "justifyContent": "flex-start",
+              "border" : "none !important", 
+               "&.Mui-selected:not(.highlighted-row )": 
+               { "backgroundColor": "#55C5D6 !important" } },
+          "& .MuiDataGrid-footerContainer": {
+            "backgroundColor": "#2764AF00",
+            "height": "35px",
+            "minHeight": "auto"
+          },
+          "& .MuiDataGrid-footerContainer .MuiToolbar-root": {
+            "height": "30px",
+            "minHeight": "auto"
+          },
+          "& .MuiDataGrid-footerContainer .MuiToolbar-root > *": {
+            "marginTop": "0px",
+            "marginBottom": "0px"
+          },
+          "& .MuiDataGrid-columnHeaders > div": {
+            "backgroundColor": "#2764AF !important",
+            "color": "white"
+          },
+          "& .MuiDataGrid-columnHeaders": {
+            "backgroundColor": "#2764AF !important"
+          },
+          "borderRadius": "8px",
+          "& .MuiDataGrid-cell": {
+            "padding": "0 5px"
+          }
+        },
+        "row": {
+          "& .MuiDataGrid-cell:focus, & .MuiDataGrid-cell:focus-within": {
+            "outline": "none"
+          }
+        }
+      },
+
+      "defaultProps": {
+        "getRowSpacing": { "top": 1, "bottom": 1 },
+        "getRowHeight": "auto",
+        "display": "flex",
+        "rowHeight": "auto",
+        "columnHeaderHeight": 45,
+        "pageSizeOptions": [5, 10, 16, 20, 25, 50, 100]
+      }
+    },
+
+    "MuiSelect": {
+      "styleOverrides": {
+        "root": {
+          "& fieldset": {
+            "borderColor": "#55C5D6"
+          },
+          "&:hover fieldset": {
+            "borderColor": "#55C5D6"
+          },
+          "&.Mui-focused fieldset": {
+            "borderColor": "#55C5D6"
+          }
+        }
+      },
+      "defaultProps": {
+        "value": "",
+        "variant": "outlined",
+        "size": "small",
+        "native": false,
+        "multiple": false,
+        "IconComponent": null,
+        "renderValue": null,
+        "displayEmpty": false,
+        "autoWidth": false
+      }
+    },
+
+    "MuiTextField": {
+      "defaultProps": {
+        "value": "",
+        "variant": "outlined",
+        "color": "primary",
+        "size": "small",
+        "type": "text",
+        "disabled": false,
+        "fullWidth": true,
+        "required": false,
+        "margin": "none",
+        "error": false
+      },
+      "styleOverrides": {
+        "root": {
+          "&.ex-small input": {
+            "padding": "4px 8px !important"
+          },
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+              "borderColor": "#55C5D6",
+              "overFlow": "hidden"
+            },
+            "&:hover fieldset": {
+              "borderColor": "#55C5D6"
+            },
+            "&.Mui-focused fieldset": {
+              "borderColor": "#55C5D6"
+            }
+          }
+        }
+      }
+    },
+
+    "MuiDialog": {
+      "styleOverrides": {
+        "root": {},
+        "paper": {
+          "padding": "20px 10px",
+          "backgroundImage": "linear-gradient(to bottom right, #3b82c4 10%, #7cd2e6)",
+          "color": "#ffffff",
+          "& input, & .MuiInputBase-root": {
+            "backgroundColor": "#ffffff",
+            "color": "#2764AF",
+            "borderRadius": "5px"
+          },
+          "& .MuiFormHelperText-root": {
+            "&:before" :{
+              "content": "'\\274C'",
+              "padding" : "0px 5px"
+            },
+            "margin"  :"0",
+            "borderRadios" : "5px",
+            "marginRight": "2px",
+            "marginTop": "4px",
+            "padding": "5px",
+            "color": "#ffffff !important",
+            "backgroundColor": "#d32f2faa",
+            "fontSize": "13px"
+          },
+          "& .MuiDivider-root": {
+            "backgroundColor": "#ffffff",
+            "height": "3px",
+            "marginTop": "10px"
+          }
+        }
+      },
+      "defaultProps": {
+        "open": false,
+        "maxWidth": "sm",
+        "fullWidth": true,
+        "fullScreen": false,
+        "scroll": "paper",
+        "keepMounted": false,
+        "transitionDuration": 50
+      }
+    }
+  }
+}

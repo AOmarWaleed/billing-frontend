@@ -1,0 +1,18 @@
+{
+  "HOME_IDS": {
+    "LABEL": {
+      "ADD_USER": 10001,
+      "OPEN_DIALOG": 10002,
+      "OPEN_FORM_DIALOG": 10003,
+      "SEARCH_PLACEHOLDER": 10004,
+      "FILTERED_RESULTS": 10005,
+      "NO_RESULTS": 10006
+    },
+    "INFO": {
+        "DIALOG_CONTENT": 10008
+    },
+    "ERROR": {
+      "LOAD_FAILED": 10007
+    }
+  }
+}

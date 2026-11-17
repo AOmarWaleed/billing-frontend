@@ -1,0 +1,53 @@
+import { Box, Typography, TextField } from "@mui/material";
+import { Field, FieldProps } from "formik"; // Import Field and FieldProps
+import { AuthGuardPermissions } from "../core/AuthGuard";
+import { useContext } from "react";
+import { AuthGuardContext } from "../core/AuthGuard";
+
+// Define a proper interface for your component props
+interface GLInputAndLabelProps extends Record<string, any> {
+  // The Formik field name must be passed to this component
+  name: string;
+  text_resource_key: string;
+  label_resource_key: string;
+}
+
+const GLInputAndLabel = ({
+  name,
+  text_resource_key,
+  label_resource_key,
+  ...restProps
+}: GLInputAndLabelProps) => {
+  const ctx = useContext(AuthGuardContext);
+  const t = ctx?.t;
+
+  return (
+    // Use the relevant resource key for the security check
+    <AuthGuardPermissions secureId={text_resource_key}>
+      {() => {
+        return (
+          <Box flex={1}>
+            <Typography {...restProps.labelProps}>
+              {t && t(label_resource_key)}
+            </Typography>
+
+            {/* 1. Use the 'name' prop passed to the component */}
+            <Field name={name}>
+              {/* 2. Destructure 'field' from FieldProps */}
+              {({ field }: FieldProps) => (
+                <TextField
+                  // 3. Apply Formik's binding props (value, onChange, onBlur, name)
+                  {...field}
+                  // 4. Apply all other props (labelProps, etc.)
+                  {...restProps}
+                />
+              )}
+            </Field>
+          </Box>
+        );
+      }}
+    </AuthGuardPermissions>
+  );
+};
+
+export default GLInputAndLabel;

@@ -1,0 +1,263 @@
+/* 
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: 0.9em;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+ 
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+} */
+/* Author : Engr. Sahar
+I add this css */
+
+/* 
+.MuiCardContent-root {
+  padding: 2px !important;
+  margin: 2px !important;
+}
+
+.ag-body-horizontal-scroll {
+  display: none !important;
+} */
+
+/* .MuiDataGrid-root {
+    margin-bottom: 5px !important;
+  } */
+
+.MuiPagination-root {
+  /* margin-top: 5px !important; */
+}
+
+/* Keep search icons on the trailing side of search inputs. */
+.MuiInputBase-root:has(> .MuiInputAdornment-positionStart [data-testid="SearchIcon"]) {
+  position: relative;
+}
+
+.MuiInputBase-root:has(> .MuiInputAdornment-positionStart [data-testid="SearchIcon"])
+  > .MuiInputAdornment-positionStart {
+  position: absolute;
+  right: 8px;
+  margin: 0;
+  z-index: 1;
+}
+
+.MuiInputBase-root:has(> .MuiInputAdornment-positionStart [data-testid="SearchIcon"])
+  > .MuiInputBase-input {
+  padding-left: 14px;
+  padding-right: 40px;
+}
+
+.MuiInputBase-root:has(> .MuiInputAdornment-positionStart [data-testid="SearchIcon"])
+  :has(> .MuiInputAdornment-positionEnd)
+  > .MuiInputAdornment-positionStart {
+  right: 40px;
+}
+
+/* end of my custom css */
+
+@media (prefers-color-scheme: light) {
+  /* :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  } */
+
+  /* @media (max-width:400px) {
+    .StyledContainer {
+      flex-direction: column;
+    }
+  } */
+}
+
+/*! error screen */
+.error-screen {
+  min-height: 100vh;
+  /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* !!! change mode btn  */
+.mode-icon-wrapper {
+  background-color: #fff;
+  width: 69px;
+  height: 31px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mode-icon-wrapper .ball {
+  background-color: var(--color);
+  width: 34px;
+  height: 27px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50px;
+  transition: transform 0.2s linear;
+}
+
+.mode-icon-wrapper.dark .ball {
+  transform: translateX(30px);
+}
+
+.mode-icon-wrapper svg {
+  position: relative;
+  z-index: 3;
+  width: 30px;
+}
+
+/*  */
+
+/* !split at patient account */
+.split {
+  display: flex;
+  gap: 2px;
+  overflow: hidden;
+  max-width: calc(100vw - 150px);
+}
+
+
+
+/*!!! color Picker */
+.color-picker .react-colorful__saturation-pointer {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.color-picker .react-colorful__hue-pointer,
+.color-picker .react-colorful__alpha-pointer {
+  width: 16px;
+  border-radius: 3px;
+}
+
+/* !! chnage background of input when browser auto complete */
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #eee inset !important;
+  -webkit-text-fill-color: black !important;
+  background-color: #000 !important;
+  box-shadow: inset #eee 0px 0px 1000px;
+  caret-color: black !important;
+}
+
+input:-webkit-autofill {
+  background-color: #000 !important;
+  box-shadow: inset #eee 0px 0px 1000px;
+}
+
+input:focus:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #eee inset !important;
+  background-color: #000 !important;
+  box-shadow: inset  0px 0px 1000px;
+} */
+
+/* .valid-field .MuiFormHelperText-root {
+  color: yellow !important;
+}
+
+.valid-field .MuiOutlinedInput-notchedOutline {
+  border-color: yellow !important;
+} */
+
+
+.MuiDataGrid-cell {
+  border: none !important;
+}
+
+/* Keep row action controls right-aligned and vertically centered. */
+.MuiDataGrid-cell[data-field="actions"],
+.MuiDataGrid-cell[data-field="action"],
+.MuiDataGrid-cell[data-field="Actions"] {
+  justify-content: flex-end !important;
+  align-items: center !important;
+  min-height: 32px !important;
+}
+
+.MuiDataGrid-cell[data-field="actions"] > *,
+.MuiDataGrid-cell[data-field="action"] > *,
+.MuiDataGrid-cell[data-field="Actions"] > * {
+  min-height: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.MuiDataGrid-cell[data-field="actions"] .MuiIconButton-root,
+.MuiDataGrid-cell[data-field="action"] .MuiIconButton-root,
+.MuiDataGrid-cell[data-field="Actions"] .MuiIconButton-root {
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+}

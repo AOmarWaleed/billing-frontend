@@ -1,0 +1,14 @@
+.parent .MuiTextField-root .MuiInputBase-input {
+    background-color: red;
+    padding: 50px 10px !important; /* Adjust padding as needed */
+    /* margin-left: 10px; */
+  }
+
+  
+  .parent .MuiTextField-root {
+    height: auto !important; /* or your desired height */
+  } /* Apply styles to the input base */
+
+  .parent {
+    /* background-color: red; */
+  }

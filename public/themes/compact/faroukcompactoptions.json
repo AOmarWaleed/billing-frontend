@@ -1,0 +1,505 @@
+{
+  "typography": {
+    "fontFamily": "Nunito, Arial, sans-serif, Segoe UI",
+    "fontSize": 11,
+    "body1": {
+      "fontSize": "0.9rem"
+    }
+  },
+
+  "components": {
+    "MuiTableContainer": {
+      "styleOverrides": {
+        "root": {
+          "background": "#ffffff"
+        }
+      }
+    },
+
+    "MuiTableCell": {
+      "styleOverrides": {
+        "root": {
+          "color": "#000000"
+        }
+      }
+    },
+
+    "MuiButton": {
+      "defaultProps": {
+        "variant": "text",
+        "color": "primary",
+        "size": "small",
+        "disableElevation": false,
+        "disableRipple": false,
+        "disableFocusRipple": false,
+        "fullWidth": false
+      },
+      "styleOverrides": {
+        "root": {
+          "fontSize": "0.9rem",
+          "fontFamily": "Nunito, Arial, sans-serif, Segoe UI",
+          "borderRadius": "8px",
+          "textTransform": "none",
+          "fontWeight": "bold",
+          "&.ex-small": {
+            "padding": "2px 4px",
+            "margin": "1px"
+          }
+        }
+      }
+    },
+
+    "MuiDataGrid": {
+      "styleOverrides": {
+        "root": {
+          "fontSize": ".78rem",
+          "& .MuiTablePagination-actions button": {
+            "padding": "0px  "
+          },
+          "& .MuiDataGrid-columnHeaderTitleContainerContent, & .MuiDataGrid-columnHeaderTitleContainerContent > div": {
+            "width": "100%"
+          },
+          "& .MuiDataGrid-root": {
+            "overFlow": "hidden"
+          },
+          "& .MuiDataGrid-topContainer": {
+            "height": "30px !important"
+          },
+          "& .MuiDataGrid-iconButtonContainer": {
+            "display": "none"
+          },
+          "& .MuiBox-root:has(.GlCustomPagination)": {
+            "padding": "0px"
+          },
+          "& .GlCustomPagination": {
+            "padding": "4px",
+            "& .MuiSelect-select, & input": {
+              "padding": "2px 4px"
+            },
+            "& .GlCustomPagination-button": {
+              "fontWeight": "normal",
+              "width": 25,
+              "height": 25,
+              "fontSize": "0.6rem"
+            }
+          },
+          "& .MuiDataGrid-menuIconButton": {
+            "width": "12px"
+          },
+          "& .MuiDataGrid-row": {
+            "&.Mui-selected:not(.highlighted-row  )": {
+              "backgroundColor": "#55C5D6 !important"
+            }
+          },
+          "& .MuiDataGrid-row:nth-of-type(odd)": {
+            "backgroundColor": "rgba(202, 215, 231, 0.15)",
+            "transition": ".5s all"
+          },
+
+          "& .MuiDataGrid-row:nth-of-type(even)": {
+            "backgroundColor": "rgba(85 , 197 , 197 , .15)",
+            "transition": ".5s all"
+          },
+          "& .MuiDataGrid-row:nth-of-type(odd):hover": {
+            "backgroundColor": "rgba(202, 215, 231, 0.44)"
+          },
+          "& .MuiDataGrid-row:nth-of-type(even):hover": {
+            "backgroundColor": "rgba(85 , 197 , 197 , .44)"
+          },
+          "& .MuiDataGrid-footerContainer": {
+            "backgroundColor": "#2764Af00",
+            "height": "30px",
+            "minHeight": "auto"
+          },
+          "& .MuiTablePagination-root": {},
+          "& .MuiDataGrid-footerContainer .MuiToolbar-root": {
+            "overflow": "hidden !important",
+            "height": "30px",
+            "minHeight": "auto"
+          },
+          "& .MuiDataGrid-footerContainer .MuiToolbar-root > *": {
+            "marginTop": "0px",
+            "marginBottom": "0px"
+          },
+
+          "& .MuiDataGrid-columnHeaders > div ": {
+            "backgroundColor": "#2764AF !important",
+            "color": "white"
+          },
+          "& .MuiDataGrid-columnHeaders": {
+            "backgroundColor": "#2764AF !important"
+          },
+          "borderRadius": "8px",
+
+          "& .MuiDataGrid-cell": { "padding": "0 5px " }
+        },
+        "row": {
+          "& .MuiDataGrid-cell:focus, & .MuiDataGrid-cell:focus-within": {
+            "outline": "none"
+          }
+        },
+        "columnHeader": {
+          "& .MuiDataGrid-columnHeaderTitle": {
+            "fontWeight": "bold"
+          },
+          "height": "30px !important",
+          "over-flow": "hidden"
+        }
+      },
+      "defaultProps": {
+        "getRowSpacing": {
+          "top": 0.5,
+          "bottom": 0.5
+        },
+        "rowHeight": 25,
+        "getRowHeight": 25,
+        "pageSizeOptions": [5, 10, 20]
+      }
+    },
+
+    "MuiSelect": {
+      "styleOverrides": {
+        "root": {
+          "& fieldset": {
+            "borderColor": "#55C5D6"
+          },
+          "&:hover fieldset": {
+            "borderColor": "#55C5D6"
+          },
+          "&.Mui-focused fieldset": {
+            "borderColor": "#55C5D6"
+          }
+        }
+      },
+      "defaultProps": {
+        "value": "",
+        "variant": "outlined",
+        "size": "small",
+        "native": false,
+        "multiple": false,
+        "IconComponent": null,
+        "renderValue": null,
+        "displayEmpty": false,
+        "autoWidth": false
+      }
+    },
+
+    "MuiTextField": {
+      "defaultProps": {
+        "value": "",
+        "variant": "outlined",
+        "color": "primary",
+        "size": "small",
+        "type": "text",
+        "disabled": false,
+        "fullWidth": true,
+        "required": false,
+        "margin": "none",
+        "error": false
+      },
+      "styleOverrides": {
+        "root": {
+          "&.ex-small input": {
+            "padding": "2px 4px !important"
+          },
+          "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+              "borderColor": "#55C5D6",
+              "overFlow": "hidden"
+            },
+            "&:hover fieldset": {
+              "borderColor": "#55C5D6"
+            },
+            "&.Mui-focused fieldset": {
+              "borderColor": "#55C5D6"
+            }
+          }
+        }
+      }
+    },
+
+    "MuiDatePicker": {
+      "styleOverrides": {
+        "root": {
+          "& .MuiOutlinedInput-root": {
+            "backgroundColor": "transparent",
+            "& fieldset": {
+              "borderColor": "#55C5D6"
+            },
+            "&:hover fieldset": {
+              "borderColor": "#55C5D6"
+            },
+            "&.Mui-focused fieldset": {
+              "borderColor": "#55C5D6"
+            }
+          },
+          "& .MuiInputBase-root": {
+            "backgroundColor": "transparent",
+            "color": "#2764AF",
+            "borderRadius": "5px"
+          },
+          "& .MuiIconButton-root": {
+            "color": "#2764AF"
+          },
+          "& .MuiSvgIcon-root": {
+            "color": "#2764AF"
+          }
+        }
+      },
+      "defaultProps": {
+        "slotProps": {
+          "textField": {
+            "size": "small",
+            "variant": "outlined",
+            "fullWidth": true
+          }
+        }
+      }
+    },
+
+    "MuiDesktopDatePicker": {
+      "styleOverrides": {
+        "root": {
+          "& .MuiOutlinedInput-root": {
+            "backgroundColor": "transparent",
+            "& fieldset": {
+              "borderColor": "#55C5D6"
+            },
+            "&:hover fieldset": {
+              "borderColor": "#55C5D6"
+            },
+            "&.Mui-focused fieldset": {
+              "borderColor": "#55C5D6"
+            }
+          },
+          "& .MuiInputBase-root": {
+            "backgroundColor": "transparent",
+            "color": "#2764AF",
+            "borderRadius": "5px"
+          },
+          "& .MuiIconButton-root": {
+            "color": "#2764AF"
+          },
+          "& .MuiSvgIcon-root": {
+            "color": "#2764AF"
+          }
+        }
+      },
+      "defaultProps": {
+        "slotProps": {
+          "textField": {
+            "size": "small",
+            "variant": "outlined",
+            "fullWidth": true
+          }
+        }
+      }
+    },
+
+    "MuiMobileDatePicker": {
+      "styleOverrides": {
+        "root": {
+          "& .MuiOutlinedInput-root": {
+            "backgroundColor": "transparent",
+            "& fieldset": {
+              "borderColor": "#55C5D6"
+            },
+            "&:hover fieldset": {
+              "borderColor": "#55C5D6"
+            },
+            "&.Mui-focused fieldset": {
+              "borderColor": "#55C5D6"
+            }
+          },
+          "& .MuiInputBase-root": {
+            "backgroundColor": "transparent",
+            "color": "#2764AF",
+            "borderRadius": "5px"
+          },
+          "& .MuiIconButton-root": {
+            "color": "#2764AF"
+          },
+          "& .MuiSvgIcon-root": {
+            "color": "#2764AF"
+          }
+        }
+      },
+      "defaultProps": {
+        "slotProps": {
+          "textField": {
+            "size": "small",
+            "variant": "outlined",
+            "fullWidth": true
+          }
+        }
+      }
+    },
+
+    "MuiStaticDatePicker": {
+      "styleOverrides": {
+        "root": {
+          "& .MuiOutlinedInput-root": {
+            "backgroundColor": "transparent",
+            "& fieldset": {
+              "borderColor": "#55C5D6"
+            },
+            "&:hover fieldset": {
+              "borderColor": "#55C5D6"
+            },
+            "&.Mui-focused fieldset": {
+              "borderColor": "#55C5D6"
+            }
+          },
+          "& .MuiInputBase-root": {
+            "backgroundColor": "transparent",
+            "color": "#2764AF",
+            "borderRadius": "5px"
+          },
+          "& .MuiIconButton-root": {
+            "color": "#2764AF"
+          },
+          "& .MuiSvgIcon-root": {
+            "color": "#2764AF"
+          }
+        }
+      },
+      "defaultProps": {
+        "slotProps": {
+          "textField": {
+            "size": "small",
+            "variant": "outlined",
+            "fullWidth": true
+          }
+        }
+      }
+    },
+
+    "MuiDialog": {
+      "styleOverrides": {
+        "root": {},
+        "paper": {
+          "padding": "20px 10px",
+          "& input, & .MuiInputBase-root": {
+            "backgroundColor": "transparent",
+            "color": "#2764AF",
+            "borderRadius": "5px"
+          },
+          "& input[disabled] , & input[readonly], & .MuiInputBase-root.disabled": {
+            "backgroundColor": "#f5f5f5",
+            "color": "#9e9e9e"
+          },
+          "& .MuiFormControl-root:has(.MuiFormHelperText-root)": {
+            "marginBottom": "10px !important"
+          },
+          "& .MuiFormHelperText-root": {
+            "position": "absolute",
+            "bottom": "-16px",
+            "left": "8px",
+            "margin": "0",
+            "padding": "0 4px",
+            "backgroundColor": "transparent",
+            "color": "#d32f2f !important",
+            "fontSize": "10px",
+            "whiteSpace": "nowrap",
+            "overflow": "hidden",
+            "textOverflow": "ellipsis",
+            "maxWidth": "calc(100% - 16px)",
+            "cursor": "help",
+            "transition": ".5s all",
+            "&:before": {
+              "content": "'⚠ '"
+            }
+          },
+          "& .MuiDivider-root": {
+            "height": "3px",
+            "margin": "4px 0"
+          },
+          "& .MuiDatePicker-root .MuiOutlinedInput-root": {
+            "backgroundColor": "transparent"
+          },
+          "& .MuiDesktopDatePicker-root .MuiOutlinedInput-root": {
+            "backgroundColor": "transparent"
+          },
+          "& .MuiMobileDatePicker-root .MuiOutlinedInput-root": {
+            "backgroundColor": "transparent"
+          }
+        }
+      },
+      "defaultProps": {
+        "open": false,
+        "maxWidth": "sm",
+        "fullWidth": false,
+        "fullScreen": false,
+        "scroll": "paper",
+        "keepMounted": false,
+        "transitionDuration": 50
+      }
+    },
+
+    "MuiPickersDay": {
+      "styleOverrides": {
+        "root": {
+          "color": "#2764AF",
+          "&.Mui-selected": {
+            "backgroundColor": "#55C5D6",
+            "color": "#ffffff",
+            "&:hover": {
+              "backgroundColor": "#2764AF"
+            }
+          },
+          "&:hover": {
+            "backgroundColor": "rgba(85, 197, 214, 0.2)"
+          }
+        }
+      }
+    },
+
+    "MuiPickersYear": {
+      "styleOverrides": {
+        "root": {
+          "color": "#2764AF",
+          "&.Mui-selected": {
+            "color": "#55C5D6"
+          }
+        }
+      }
+    },
+
+    "MuiPickersMonth": {
+      "styleOverrides": {
+        "root": {
+          "color": "#2764AF",
+          "&.Mui-selected": {
+            "color": "#55C5D6"
+          }
+        }
+      }
+    },
+
+    "MuiDateCalendar": {
+      "styleOverrides": {
+        "root": {
+          "backgroundColor": "#ffffff",
+          "color": "#2764AF"
+        }
+      }
+    },
+
+    "MuiPickersToolbar": {
+      "styleOverrides": {
+        "root": {
+          "backgroundColor": "#2764AF",
+          "color": "#ffffff"
+        }
+      }
+    },
+
+    "MuiClockPicker": {
+      "styleOverrides": {
+        "root": {
+          "backgroundColor": "#ffffff"
+        }
+      }
+    }
+  }
+}

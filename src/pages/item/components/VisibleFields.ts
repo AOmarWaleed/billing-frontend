@@ -1,0 +1,1 @@
+export const VISIBLE_FIELDS = ['item_id','description','item_bk','category_code','legacy_code','actions'];

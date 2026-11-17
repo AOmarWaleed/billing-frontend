@@ -1,0 +1,23 @@
+import { defineConfig } from "vite";
+import { config } from "dotenv";
+
+// Load environment variables from .env file
+config();
+
+export default defineConfig({
+  server: {
+    port: process.env.PORT,
+    allowedHosts: true,
+  },
+  // server: { port: 3000, },
+  // Your Vite configuration
+  // esbuild: {
+  //   // Remove "use client" directives
+  //   loader: "jsx",
+  //   include: /\.jsx?$/,
+  //   exclude: [],
+  // },
+  define: {
+    "process.env": process.env,
+  },
+});
